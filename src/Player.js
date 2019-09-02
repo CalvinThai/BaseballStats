@@ -128,11 +128,12 @@ class Player extends React.Component{
                         pitchingstats = res2['people']['0']['stats'][i]
                     }
                 }
+                /*
                 console.log("hitting stats",hittingstats)
                 console.log("pitching stats",pitchingstats)
                 console.log(res1)
                 console.log(res1['people'][0].id)
-
+*/
 
                 this.setState({
                     isLoaded:true,
@@ -176,11 +177,13 @@ class Player extends React.Component{
 
 
     if (this.state.hittingstats.length === undefined && this.state.pitchingstats.length === 0){
-        console.log(123213213)
         page = (
             <div>
                 <h1>{this.state.name} </h1> &nbsp;&nbsp;&nbsp;&nbsp;
-                <img src ={"https://securea.mlb.com/mlb/images/players/head_shot/" +this.state.id+".jpg"} width="213" height="320"></img>
+                <img src ={"https://securea.mlb.com/mlb/images/players/head_shot/" +this.state.id+".jpg"} width="213" height="320"></img><br></br>
+                Age: {this.state.age} <br></br> 
+                Height: {this.state.height} <br></br>
+                Weight: {this.state.weight}
                 <table id="stats">
                     <tbody>
                     <tr>
@@ -198,7 +201,10 @@ class Player extends React.Component{
         page = (
             <div>
                 <h1>{this.state.name} </h1> &nbsp;&nbsp;&nbsp;&nbsp;
-                <img src ={"https://securea.mlb.com/mlb/images/players/head_shot/" +this.state.id+".jpg"} width="213" height="320"></img>
+                <img src ={"https://securea.mlb.com/mlb/images/players/head_shot/" +this.state.id+".jpg"} width="213" height="320"></img><br></br>
+                Age: {this.state.age} <br></br> 
+                Height: {this.state.height} <br></br>
+                Weight: {this.state.weight}
                 <hr></hr>
                 <br></br>
 
@@ -233,7 +239,10 @@ class Player extends React.Component{
     else if(this.state.hittingstats.length === 0 && this.state.pitchingstats.length === undefined){ //pithced but never hit
         page = (            <div>
                 <h1>{this.state.name} </h1> &nbsp;&nbsp;&nbsp;&nbsp;
-                <img src ={"https://securea.mlb.com/mlb/images/players/head_shot/" +this.state.id+".jpg"} width="213" height="320"></img>
+                <img src ={"https://securea.mlb.com/mlb/images/players/head_shot/" +this.state.id+".jpg"} width="213" height="320"></img><br></br>
+                Age: {this.state.age} <br></br> 
+                Height: {this.state.height} <br></br>
+                Weight: {this.state.weight}
             <hr></hr>
             <br></br>
             Pitching Stats
